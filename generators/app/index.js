@@ -96,6 +96,15 @@ class BackurappGenerator extends Generator {
       context,
       {},
     )
+
+    if (this.docker) {
+      this.fs.copyTpl(
+        this.templatePath('Dockerfile'),
+        this.destinationPath(`${this.appname}/Dockerfile`),
+        context,
+        {},
+      )
+    }
   }
 
   install() {
