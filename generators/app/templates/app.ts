@@ -1,4 +1,3 @@
-import http from 'http'
 import express from 'express'
 import cookieParser from 'cookie-parser'
 import bodyParser from 'body-parser'
@@ -9,10 +8,13 @@ config()
 
 const { PORT } = process.env
 
-const app = express()
-app.use(cookieParser)
-app.use(cors)
-app.use(bodyParser)
+export const server = express()
+server.use(cookieParser())
+server.use(cors())
+server.use(bodyParser.json())
 
-export const server = http.createServer(app)
+server.get('/', (req: express.Request, res: express.Response) => {
+  res.send('Hello there!')
+})
+
 export const port = PORT
