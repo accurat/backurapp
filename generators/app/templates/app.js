@@ -8,13 +8,13 @@ config()
 
 const { PORT } = process.env
 
-const app = express()
-app.use(cookieParser())
-app.use(cors())
-app.use(bodyParser.json())
+const server = express()
+server.use(cookieParser())
+server.use(cors())
+server.use(bodyParser.json())
 
-app.get('/', (req, res) => {
+server.get('/', (req, res) => {
   res.send('Hello there!')
 })
 
-module.exports = { app, port: PORT }
+module.exports = { server, port: PORT }
