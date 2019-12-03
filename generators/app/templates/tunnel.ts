@@ -3,10 +3,10 @@ import { Socket } from 'net'
 import { Client } from 'ssh2'
 
 const { USER, SSH_AUTH_SOCK, TUNNEL_DOMAIN, SSH_PORT, PORT } = process.env
-
 const protocol = TUNNEL_DOMAIN === 'localhost' ? 'http' : 'https'
+const noop = (...args) => {}
 
-function createClient(config, onReadyCb, onConnectionCb) {
+function createClient(config, onReadyCb = noop, onConnectionCb = noop) {
   const conn = new Client()
   const errors = []
 
