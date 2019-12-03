@@ -9,7 +9,7 @@ const {
   JS_FILES,
   TS_FILES,
 } = require('./constants')
-class JSBachurappGenerator extends Generator {
+class BackurappGenerator extends Generator {
   prompting() {
     this.log('Non hai di meglio da fare?')
     this.option('dry')
@@ -108,4 +108,4 @@ class JSBachurappGenerator extends Generator {
   }
 }
 
-module.exports = JSBachurappGenerator
+module.exports = BackurappGenerator

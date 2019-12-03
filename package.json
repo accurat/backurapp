@@ -1,7 +1,7 @@
 {
-  "name": "generator-jsbachurapp",
+  "name": "generator-backurapp",
   "version": "0.0.0",
-  "description": "generator for jsbachurapp",
+  "description": "generator for backurapp",
   "homepage": "",
   "author": {
     "name": "Luca Mattiazzi",
@@ -27,6 +27,6 @@
   "jest": {
     "testEnvironment": "node"
   },
-  "repository": "accurat/generator-jsbachurapp",
+  "repository": "accurat/generator-backurapp",
   "license": "MIT"
 }
