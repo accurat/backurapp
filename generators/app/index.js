@@ -91,7 +91,7 @@ class JSBachurappGenerator extends Generator {
     )
 
     this.fs.copyTpl(
-      [this.templatePath('.env.example')],
+      this.templatePath('.env.example'),
       this.destinationPath(`${this.appname}/.env`),
       context,
       {},
