@@ -1,0 +1,14 @@
+{
+  "name": "<%= appname %>",
+  "version": "0.0.1",
+  "description": "<%= description %>",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start-dev": "nodemon index.js",
+    "tunnel": "node tunnel.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

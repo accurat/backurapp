@@ -1,0 +1,32 @@
+{
+  "name": "generator-jsbachurapp",
+  "version": "0.0.0",
+  "description": "generator for jsbachurapp",
+  "homepage": "",
+  "author": {
+    "name": "Luca Mattiazzi",
+    "email": "luca.mattiazzi@accurat.it",
+    "url": "https://accurat.it"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "prettier": "^1.19.1",
+    "eslint-config-prettier": "^6.6.0",
+    "eslint-plugin-prettier": "^3.1.1"
+  },
+  "dependencies": {
+    "yeoman-generator": "^2.0.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "repository": "accurat/generator-jsbachurapp",
+  "license": "MIT"
+}

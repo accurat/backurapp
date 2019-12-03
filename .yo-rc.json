@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Luca Mattiazzi",
+      "authorEmail": "luca.mattiazzi@accurat.it",
+      "authorUrl": ""
+    }
+  }
+}
