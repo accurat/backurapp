@@ -1,12 +1,7 @@
 # Backurapp
 
-```bash
-npm install -g yo
-npm install -g generator-backurapp
-```
-
-Then generate your new project:
+Then generate your new project, first make sure you're in your project folder (`mkdir my-awesome-project && cd my-awesome-project/`), then run:
 
 ```bash
-yo backurapp
+npm init yo backurapp
 ```
