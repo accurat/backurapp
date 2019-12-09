@@ -15,7 +15,6 @@ class BackurappGenerator extends Generator {
     this.option('dry')
 
     return this.prompt(PROMPTS).then(props => {
-      if (props.databases.includes('mongodb')) this.log('Good choice! MongoDB is webscale!')
       // I guess this could be done in one line, but this is more readable
       this.typescript = props.typescript
       this.databases = props.databases
@@ -27,7 +26,7 @@ class BackurappGenerator extends Generator {
 
   _installDefaults() {
     this.yarnInstall(['lodash', 'express', 'cors', 'cookie-parser', 'dotenv'])
-    this.yarnInstall(['jest', 'supertest', 'nodemon', 'ssh2', 'got'], { dev: true })
+    this.yarnInstall(['jest', 'supertest', 'nodemon', 'ssh-tuna', 'got'], { dev: true })
   }
 
   _handleTypescript(typescript) {
@@ -93,6 +92,13 @@ class BackurappGenerator extends Generator {
     this.fs.copyTpl(
       this.templatePath('.env.example'),
       this.destinationPath(`${this.appname}/.env`),
+      context,
+      {},
+    )
+
+    this.fs.copyTpl(
+      this.templatePath('_package.json'),
+      this.destinationPath(`${this.appname}/package.json`),
       context,
       {},
     )

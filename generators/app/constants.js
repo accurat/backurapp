@@ -8,15 +8,15 @@ const DESCRIPTIONS = [
 
 const description = DESCRIPTIONS[Math.floor(Math.random() * DESCRIPTIONS.length)]
 
-const FILES = ['.gitignore', '.prettierignore', '.prettierrc', 'package.json']
+const FILES = ['.gitignore', '.prettierignore', '.prettierrc']
 const JS_FILES = ['src/app.js', 'src/index.js', 'src/tunnel.js']
 const TS_FILES = ['src/app.ts', 'src/index.ts', 'src/tunnel.ts']
 
 const databasesLibraries = {
-  postgres: { js: ['pg', 'pg-hstore'], ts: ['@types/pg', '@types/pg-hstore'] },
+  postgres: { js: ['pg', 'pg-hstore'], ts: ['@types/pg'] },
   sqlite: { js: ['sqlite3'], ts: ['@types/sqlite3'] },
   mongodb: { js: ['mongodb'], ts: ['@types/mongodb'] },
-  mysql: { js: ['mysql2'], ts: ['@types/mysql2'] },
+  mysql: { js: ['mysql2'], ts: [] },
   redis: { js: ['redis'], ts: ['@types/redis'] },
 }
 
