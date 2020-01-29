@@ -5,3 +5,9 @@ Then generate your new project, first make sure you're in your project folder (`
 ```bash
 npm init yo backurapp
 ```
+
+To run tests:
+
+```bash
+yarn test
+```
