@@ -34,6 +34,7 @@ class BackurappGenerator extends Generator {
       this.yarnInstall(
         [
           'typescript',
+          'ts-node',
           '@types/node',
           '@types/express',
           '@types/cors',
@@ -77,7 +78,14 @@ class BackurappGenerator extends Generator {
   }
 
   _copyFiles() {
-    const context = { appname: this.appname, description }
+    const start = this.typescript ? 'ts-node src/index.ts' : 'node src/index.js'
+    const startDev = this.typescript ? 'nodemon src/index.ts' : 'nodemon src/index.js'
+    const context = {
+      appname: this.appname,
+      description,
+      start,
+      startDev,
+    }
     const langFiles = this.typescript ? TS_FILES : JS_FILES
     const files = [...FILES, ...langFiles].map(f => this.templatePath(f))
 

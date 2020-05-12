@@ -4,9 +4,8 @@
   "description": "<%= description %>",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "start-dev": "nodemon src/index.js",
-    "tunnel": "node src/tunnel.js"
+    "start": "<%= start %>",
+    "start-dev": "<%= startDev %>"
   },
   "keywords": [],
   "author": "",

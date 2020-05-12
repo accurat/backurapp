@@ -10,7 +10,7 @@ const description = DESCRIPTIONS[Math.floor(Math.random() * DESCRIPTIONS.length)
 
 const FILES = ['.gitignore', '.prettierignore', '.prettierrc']
 const JS_FILES = ['src/app.js', 'src/index.js', 'src/tunnel.js']
-const TS_FILES = ['src/app.ts', 'src/index.ts', 'src/tunnel.ts']
+const TS_FILES = ['src/app.ts', 'src/index.ts', 'src/tunnel.ts', 'tsconfig.json']
 
 const databasesLibraries = {
   postgres: { js: ['pg', 'pg-hstore'], ts: ['@types/pg'] },

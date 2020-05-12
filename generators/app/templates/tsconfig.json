@@ -2,24 +2,26 @@
   "compilerOptions": {
     "types": ["node", "jest"],
     "strict": true,
-    "outDir": "build",
+    "outDir": "dist",
+    "removeComments": true,
     "sourceMap": true,
     "target": "es6",
     "module": "commonjs",
     "moduleResolution": "node",
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowJs": true,
     "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "lib": ["es6", "es7", "es2017"],
+    "pretty": true,
+    "allowJs": true,
     "resolveJsonModule": true,
-    "strictNullChecks": true,
+    "strictNullChecks": false,
     "noImplicitReturns": true,
     "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": false,
     "forceConsistentCasingInFileNames": true,
-    "lib": ["es6", "es7", "es2017"],
-    "pretty": true
+    "experimentalDecorators": true,
+    "downlevelIteration": true
   },
-  "include": ["generators"]
+  "include": ["src"]
 }
