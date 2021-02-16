@@ -23,5 +23,5 @@
     "experimentalDecorators": true,
     "downlevelIteration": true
   },
-  "include": ["src"]
+  "include": ["src", "test"]
 }

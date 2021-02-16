@@ -25,8 +25,8 @@ class BackurappGenerator extends Generator {
   }
 
   _installDefaults() {
-    this.yarnInstall(['lodash', 'express', 'cors', 'cookie-parser', 'dotenv'])
-    this.yarnInstall(['jest', 'supertest', 'nodemon', 'ssh-tuna', 'got'], { dev: true })
+    this.yarnInstall(['lodash', 'express', 'cors', 'cookie-parser', 'dotenv', 'got'])
+    this.yarnInstall(['jest', 'supertest', 'nodemon'], { dev: true })
   }
 
   _handleTypescript(typescript) {
@@ -36,6 +36,7 @@ class BackurappGenerator extends Generator {
           'typescript',
           'ts-node',
           '@types/node',
+          '@types/got',
           '@types/express',
           '@types/cors',
           '@types/lodash',
@@ -78,13 +79,15 @@ class BackurappGenerator extends Generator {
   }
 
   _copyFiles() {
-    const start = this.typescript ? 'ts-node src/index.ts' : 'node src/index.js'
-    const startDev = this.typescript ? 'nodemon src/index.ts' : 'nodemon src/index.js'
+    const main = this.typescript ? 'src/index.ts' : 'src/index.js'
+    const start = this.typescript ? `ts-node ${main}` : `node ${main}`
+    const startDev = this.typescript ? `nodemon ${main}` : `nodemon ${main}`
     const context = {
       appname: this.appname,
       description,
       start,
       startDev,
+      main,
     }
     const langFiles = this.typescript ? TS_FILES : JS_FILES
     const files = [...FILES, ...langFiles].map(f => this.templatePath(f))
