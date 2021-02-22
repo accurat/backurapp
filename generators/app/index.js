@@ -11,7 +11,7 @@ const {
 } = require('./constants')
 class BackurappGenerator extends Generator {
   prompting() {
-    this.log('Non hai di meglio da fare?')
+    this.log('Non hai di meglio da fare??')
     this.option('dry')
 
     return this.prompt(PROMPTS).then(props => {
